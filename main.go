@@ -28,7 +28,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elastic/go-licenser/licensing"
+	"github.com/orus-io/go-licenser/licensing"
 )
 
 const (
@@ -130,7 +130,7 @@ func run(args []string, license, licensor string, exclude []string, ext string, 
 
 	var headerBytes []byte
 	if copyright {
-	        year, _, _ := time.Now().Date()
+		year, _, _ := time.Now().Date()
 		headerBytes = append(headerBytes, []byte(fmt.Sprintf("// Copyright %d %s\n", year, licensor))...)
 	}
 	for i, line := range header {
